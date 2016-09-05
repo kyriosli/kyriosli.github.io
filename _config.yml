@@ -1,0 +1,16 @@
+# Site settings
+title: Kyrios.li
+email: lz3259@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Blog of Kyrios LI
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://kyrios.li" # the base hostname & protocol for your site
+github_username:  kyriosli
+
+imageurl: "http://kyrios.li/images"
+
+# Build settings
+markdown: kramdown
+#highlighter: pygments
+highlighter: rouge
+timezone: Asia/Hong_Kong
