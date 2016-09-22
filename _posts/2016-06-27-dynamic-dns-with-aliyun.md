@@ -88,3 +88,5 @@ echo "record_id=$record_id; saved_ip=$ip" > saved_ip
 ```
 
 这段代码可以在梅林自带的busybox里面运行，将脚本保存到文件系统中，并定时执行，就可以自动在IP变更时重新注册了。
+
+[author|kyrios.li]
