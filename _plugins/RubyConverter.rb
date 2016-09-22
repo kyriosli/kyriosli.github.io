@@ -12,7 +12,7 @@ module Jekyll
         end
 
         def convert(content)
-            content.gsub!(/\[([^\[\]\|]+)\|([^\[\]\|]+)\]/, "<ruby>$1<rp>(</rp><rt>$2</rt><rp>)</rp></ruby>")
+            content.gsub(/\[([^\[\]\|]+)\|([^\[\]\|]+)\]/, '<ruby>\1<rp>(</rp><rt>\2</rt><rp>)</rp></ruby>')
         end
     end
 end
