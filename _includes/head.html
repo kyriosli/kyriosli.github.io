@@ -8,4 +8,21 @@
 
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    {% if page.react %}
+    <script src="/js/react.js"></script>
+    <script src="/js/react-dom.js"></script>
+    <script src="/js/require.js"></script>
+    {% if page.react_editor %}
+    <link rel="stylesheet" href="/css/codemirror.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/react.css">
+    <script src="/js/codemirror.js"></script>
+    <script src="/js/javascript.js"></script>
+    <script src="/js/xml.js"></script>
+    <script src="/js/jsx.js"></script>
+
+    <script src="/js/babel.min.js"></script>
+    <script src="/js/live_editor.js"></script>
+    {% endif %}
+    {% endif %}
 </head>

@@ -3,16 +3,36 @@ layout: default
 ---
 <div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta
+            }}{% endif %}</p>
+    </header>
 
-  <article class="post-content">
-    {{ content }}
-  </article>
-  
+    <article class="post-content">
+        {{ content }}
+    </article>
+
+
+    {% if page.react_editor %}
+    <script>
+        Array.prototype.forEach.call(document.querySelectorAll('react-playground'), function (elem) {
+            var src = elem.firstChild.textContent.trim();
+            if (src.slice(0, 5) === '```js') {
+                src = src.slice(5, -3).trim()
+            }
+            ReactDOM.render(React.createElement(ReactPlayground, {
+                codeText: src, __source: {}
+            }), elem);
+
+        })
+    </script>
+    {% endif %}
+    {% if page.css_editor %}
+    <script src="/js/css.js"></script>
+    <script src="/js/css_editor.js"></script>
+    {% endif %}
     <div id="disqus_thread"></div>
     <script src="//kyriosli.disqus.com/embed.js"></script>
-  
+
 </div>
