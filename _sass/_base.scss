@@ -108,11 +108,11 @@ a {
  */
 blockquote {
   color: $grey-color;
-  border-left: 4px solid $grey-color-light;
+  border-left: 4px solid #c17676;
+  background: #f8f8f8;
   padding-left: $spacing-unit / 2;
   font-size: 18px;
   letter-spacing: -1px;
-  font-style: italic;
 
   > :last-child {
     margin-bottom: 0;
@@ -128,12 +128,13 @@ code {
   font-size: 13px;
   border: 1px solid $grey-color-light;
   border-radius: 1px;
-  background-color: #F5F5F5;
+  background-color: #272822;
   /*white-space: pre-wrap;*/
 }
 
 code {
   padding: 1px 5px;
+  background-color: #bbbbbb;
 }
 
 pre {
@@ -144,6 +145,8 @@ pre {
     border: 0;
     padding-right: 0;
     padding-left: 0;
+    color: #f8f8f2;
+    background-color: transparent;
   }
 }
 
